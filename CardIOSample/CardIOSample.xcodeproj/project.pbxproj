@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD54C7DD1CF731CC003FBB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */; };
+		DD54C7DF1CF731CC003FBB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7DE1CF731CC003FBB97 /* ViewController.swift */; };
+		DD54C7E21CF731CC003FBB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD54C7E01CF731CC003FBB97 /* Main.storyboard */; };
+		DD54C7E41CF731CC003FBB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD54C7E31CF731CC003FBB97 /* Assets.xcassets */; };
+		DD54C7E71CF731CC003FBB97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD54C7E51CF731CC003FBB97 /* LaunchScreen.storyboard */; };
+		DD54C7F21CF731CC003FBB97 /* CardIOSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7F11CF731CC003FBB97 /* CardIOSampleTests.swift */; };
+		DD54C7FD1CF731CC003FBB97 /* CardIOSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7FC1CF731CC003FBB97 /* CardIOSampleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD54C7EE1CF731CC003FBB97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD54C7D11CF731CC003FBB97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD54C7D81CF731CC003FBB97;
+			remoteInfo = CardIOSample;
+		};
+		DD54C7F91CF731CC003FBB97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD54C7D11CF731CC003FBB97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD54C7D81CF731CC003FBB97;
+			remoteInfo = CardIOSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD54C7D91CF731CC003FBB97 /* CardIOSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardIOSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD54C7DE1CF731CC003FBB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD54C7E11CF731CC003FBB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD54C7E31CF731CC003FBB97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD54C7E61CF731CC003FBB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD54C7E81CF731CC003FBB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD54C7ED1CF731CC003FBB97 /* CardIOSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardIOSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD54C7F11CF731CC003FBB97 /* CardIOSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIOSampleTests.swift; sourceTree = "<group>"; };
+		DD54C7F31CF731CC003FBB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD54C7F81CF731CC003FBB97 /* CardIOSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardIOSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD54C7FC1CF731CC003FBB97 /* CardIOSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIOSampleUITests.swift; sourceTree = "<group>"; };
+		DD54C7FE1CF731CC003FBB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD54C7D61CF731CC003FBB97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD54C7EA1CF731CC003FBB97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD54C7F51CF731CC003FBB97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD54C7D01CF731CC003FBB97 = {
+			isa = PBXGroup;
+			children = (
+				DD54C7DB1CF731CC003FBB97 /* CardIOSample */,
+				DD54C7F01CF731CC003FBB97 /* CardIOSampleTests */,
+				DD54C7FB1CF731CC003FBB97 /* CardIOSampleUITests */,
+				DD54C7DA1CF731CC003FBB97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD54C7DA1CF731CC003FBB97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD54C7D91CF731CC003FBB97 /* CardIOSample.app */,
+				DD54C7ED1CF731CC003FBB97 /* CardIOSampleTests.xctest */,
+				DD54C7F81CF731CC003FBB97 /* CardIOSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD54C7DB1CF731CC003FBB97 /* CardIOSample */ = {
+			isa = PBXGroup;
+			children = (
+				DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */,
+				DD54C7DE1CF731CC003FBB97 /* ViewController.swift */,
+				DD54C7E01CF731CC003FBB97 /* Main.storyboard */,
+				DD54C7E31CF731CC003FBB97 /* Assets.xcassets */,
+				DD54C7E51CF731CC003FBB97 /* LaunchScreen.storyboard */,
+				DD54C7E81CF731CC003FBB97 /* Info.plist */,
+			);
+			path = CardIOSample;
+			sourceTree = "<group>";
+		};
+		DD54C7F01CF731CC003FBB97 /* CardIOSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD54C7F11CF731CC003FBB97 /* CardIOSampleTests.swift */,
+				DD54C7F31CF731CC003FBB97 /* Info.plist */,
+			);
+			path = CardIOSampleTests;
+			sourceTree = "<group>";
+		};
+		DD54C7FB1CF731CC003FBB97 /* CardIOSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD54C7FC1CF731CC003FBB97 /* CardIOSampleUITests.swift */,
+				DD54C7FE1CF731CC003FBB97 /* Info.plist */,
+			);
+			path = CardIOSampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD54C7D81CF731CC003FBB97 /* CardIOSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD54C8011CF731CC003FBB97 /* Build configuration list for PBXNativeTarget "CardIOSample" */;
+			buildPhases = (
+				DD54C7D51CF731CC003FBB97 /* Sources */,
+				DD54C7D61CF731CC003FBB97 /* Frameworks */,
+				DD54C7D71CF731CC003FBB97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardIOSample;
+			productName = CardIOSample;
+			productReference = DD54C7D91CF731CC003FBB97 /* CardIOSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD54C7EC1CF731CC003FBB97 /* CardIOSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD54C8041CF731CC003FBB97 /* Build configuration list for PBXNativeTarget "CardIOSampleTests" */;
+			buildPhases = (
+				DD54C7E91CF731CC003FBB97 /* Sources */,
+				DD54C7EA1CF731CC003FBB97 /* Frameworks */,
+				DD54C7EB1CF731CC003FBB97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD54C7EF1CF731CC003FBB97 /* PBXTargetDependency */,
+			);
+			name = CardIOSampleTests;
+			productName = CardIOSampleTests;
+			productReference = DD54C7ED1CF731CC003FBB97 /* CardIOSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD54C7F71CF731CC003FBB97 /* CardIOSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD54C8071CF731CC003FBB97 /* Build configuration list for PBXNativeTarget "CardIOSampleUITests" */;
+			buildPhases = (
+				DD54C7F41CF731CC003FBB97 /* Sources */,
+				DD54C7F51CF731CC003FBB97 /* Frameworks */,
+				DD54C7F61CF731CC003FBB97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD54C7FA1CF731CC003FBB97 /* PBXTargetDependency */,
+			);
+			name = CardIOSampleUITests;
+			productName = CardIOSampleUITests;
+			productReference = DD54C7F81CF731CC003FBB97 /* CardIOSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD54C7D11CF731CC003FBB97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Philip Sawyer";
+				TargetAttributes = {
+					DD54C7D81CF731CC003FBB97 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DD54C7EC1CF731CC003FBB97 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DD54C7D81CF731CC003FBB97;
+					};
+					DD54C7F71CF731CC003FBB97 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DD54C7D81CF731CC003FBB97;
+					};
+				};
+			};
+			buildConfigurationList = DD54C7D41CF731CC003FBB97 /* Build configuration list for PBXProject "CardIOSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD54C7D01CF731CC003FBB97;
+			productRefGroup = DD54C7DA1CF731CC003FBB97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD54C7D81CF731CC003FBB97 /* CardIOSample */,
+				DD54C7EC1CF731CC003FBB97 /* CardIOSampleTests */,
+				DD54C7F71CF731CC003FBB97 /* CardIOSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD54C7D71CF731CC003FBB97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD54C7E71CF731CC003FBB97 /* LaunchScreen.storyboard in Resources */,
+				DD54C7E41CF731CC003FBB97 /* Assets.xcassets in Resources */,
+				DD54C7E21CF731CC003FBB97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD54C7EB1CF731CC003FBB97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD54C7F61CF731CC003FBB97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD54C7D51CF731CC003FBB97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD54C7DF1CF731CC003FBB97 /* ViewController.swift in Sources */,
+				DD54C7DD1CF731CC003FBB97 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD54C7E91CF731CC003FBB97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD54C7F21CF731CC003FBB97 /* CardIOSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD54C7F41CF731CC003FBB97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD54C7FD1CF731CC003FBB97 /* CardIOSampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD54C7EF1CF731CC003FBB97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD54C7D81CF731CC003FBB97 /* CardIOSample */;
+			targetProxy = DD54C7EE1CF731CC003FBB97 /* PBXContainerItemProxy */;
+		};
+		DD54C7FA1CF731CC003FBB97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD54C7D81CF731CC003FBB97 /* CardIOSample */;
+			targetProxy = DD54C7F91CF731CC003FBB97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD54C7E01CF731CC003FBB97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD54C7E11CF731CC003FBB97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD54C7E51CF731CC003FBB97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD54C7E61CF731CC003FBB97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD54C7FF1CF731CC003FBB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD54C8001CF731CC003FBB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD54C8021CF731CC003FBB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardIOSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipsawyer.CardIOSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD54C8031CF731CC003FBB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardIOSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipsawyer.CardIOSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD54C8051CF731CC003FBB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CardIOSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipsawyer.CardIOSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardIOSample.app/CardIOSample";
+			};
+			name = Debug;
+		};
+		DD54C8061CF731CC003FBB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CardIOSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipsawyer.CardIOSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardIOSample.app/CardIOSample";
+			};
+			name = Release;
+		};
+		DD54C8081CF731CC003FBB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CardIOSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipsawyer.CardIOSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CardIOSample;
+			};
+			name = Debug;
+		};
+		DD54C8091CF731CC003FBB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CardIOSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipsawyer.CardIOSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CardIOSample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD54C7D41CF731CC003FBB97 /* Build configuration list for PBXProject "CardIOSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD54C7FF1CF731CC003FBB97 /* Debug */,
+				DD54C8001CF731CC003FBB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD54C8011CF731CC003FBB97 /* Build configuration list for PBXNativeTarget "CardIOSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD54C8021CF731CC003FBB97 /* Debug */,
+				DD54C8031CF731CC003FBB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD54C8041CF731CC003FBB97 /* Build configuration list for PBXNativeTarget "CardIOSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD54C8051CF731CC003FBB97 /* Debug */,
+				DD54C8061CF731CC003FBB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD54C8071CF731CC003FBB97 /* Build configuration list for PBXNativeTarget "CardIOSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD54C8081CF731CC003FBB97 /* Debug */,
+				DD54C8091CF731CC003FBB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD54C7D11CF731CC003FBB97 /* Project object */;
+}

@@ -10,12 +10,13 @@
 		7F583668E059C077730C0A13 /* Pods_CardIOSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F18D2094A4C5C3E0CC40D5 /* Pods_CardIOSample.framework */; };
 		CB01D63592A2E914DDDD96E4 /* Pods_CardIOSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61414429E31747AFB0F888F /* Pods_CardIOSampleUITests.framework */; };
 		DD54C7DD1CF731CC003FBB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */; };
-		DD54C7DF1CF731CC003FBB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7DE1CF731CC003FBB97 /* ViewController.swift */; };
+		DD54C7DF1CF731CC003FBB97 /* DisplayVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7DE1CF731CC003FBB97 /* DisplayVCViewController.swift */; };
 		DD54C7E21CF731CC003FBB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD54C7E01CF731CC003FBB97 /* Main.storyboard */; };
 		DD54C7E41CF731CC003FBB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD54C7E31CF731CC003FBB97 /* Assets.xcassets */; };
 		DD54C7E71CF731CC003FBB97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD54C7E51CF731CC003FBB97 /* LaunchScreen.storyboard */; };
 		DD54C7F21CF731CC003FBB97 /* CardIOSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7F11CF731CC003FBB97 /* CardIOSampleTests.swift */; };
 		DD54C7FD1CF731CC003FBB97 /* CardIOSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7FC1CF731CC003FBB97 /* CardIOSampleUITests.swift */; };
+		DD54C80E1CF78A00003FBB97 /* DisplaySVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C80D1CF78A00003FBB97 /* DisplaySVViewController.swift */; };
 		F0648F88CEB0BA3E02727F06 /* Pods_CardIOSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D400AE118D46536124EF23 /* Pods_CardIOSampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,7 @@
 		C0F7502301E1B25B1660697B /* Pods-CardIOSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardIOSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardIOSampleTests/Pods-CardIOSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD54C7D91CF731CC003FBB97 /* CardIOSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardIOSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD54C7DE1CF731CC003FBB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD54C7DE1CF731CC003FBB97 /* DisplayVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVCViewController.swift; sourceTree = "<group>"; };
 		DD54C7E11CF731CC003FBB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD54C7E31CF731CC003FBB97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD54C7E61CF731CC003FBB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		DD54C7FC1CF731CC003FBB97 /* CardIOSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIOSampleUITests.swift; sourceTree = "<group>"; };
 		DD54C7FE1CF731CC003FBB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD54C80A1CF7346D003FBB97 /* CardIOSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardIOSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD54C80D1CF78A00003FBB97 /* DisplaySVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplaySVViewController.swift; sourceTree = "<group>"; };
 		F61414429E31747AFB0F888F /* Pods_CardIOSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardIOSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA465ADFF9EEE0856F62EDA /* Pods-CardIOSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardIOSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardIOSample/Pods-CardIOSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */,
-				DD54C7DE1CF731CC003FBB97 /* ViewController.swift */,
+				DD54C7DE1CF731CC003FBB97 /* DisplayVCViewController.swift */,
+				DD54C80D1CF78A00003FBB97 /* DisplaySVViewController.swift */,
 				DD54C7E01CF731CC003FBB97 /* Main.storyboard */,
 				DD54C7E31CF731CC003FBB97 /* Assets.xcassets */,
 				DD54C7E51CF731CC003FBB97 /* LaunchScreen.storyboard */,
@@ -429,7 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD54C7DF1CF731CC003FBB97 /* ViewController.swift in Sources */,
+				DD54C7DF1CF731CC003FBB97 /* DisplayVCViewController.swift in Sources */,
+				DD54C80E1CF78A00003FBB97 /* DisplaySVViewController.swift in Sources */,
 				DD54C7DD1CF731CC003FBB97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

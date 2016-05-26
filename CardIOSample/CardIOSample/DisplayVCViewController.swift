@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
+class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

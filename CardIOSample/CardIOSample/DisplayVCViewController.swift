@@ -10,15 +10,23 @@ import UIKit
 
 class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDelegate {
     
-    var settingsHelper: VCSettingsHelper!
+    var settingsDict : [String : AnyObject]!
+    let defaultColor = UIColor.greenColor()
 
     override func viewDidLoad() {
         self.title = "CardIO as ViewController"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        settingsHelper = VCSettingsHelper()
+        //self = VCself()
+        self.settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false]
         
         CardIOUtilities.preload()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //print("\(self.settingsDict)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,21 +60,29 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
     }
     
     func setUpViewController(cardIOVC : CardIOPaymentViewController) {
-        cardIOVC.languageOrLocale = self.settingsHelper.getSetting("locale") as! String
-        cardIOVC.disableBlurWhenBackgrounding = self.settingsHelper.getSetting("backgroundBlur") as! Bool
-        cardIOVC.guideColor = self.settingsHelper.getSetting("guideColor") as! UIColor
-        cardIOVC.suppressScanConfirmation = self.settingsHelper.getSetting("scanConfirmation") as! Bool
-        cardIOVC.suppressScannedCardImage = self.settingsHelper.getSetting("suppressScannedCardImage") as! Bool
-        cardIOVC.scannedImageDuration = self.settingsHelper.getSetting("scannedImageDuration") as! CGFloat
-        cardIOVC.hideCardIOLogo = self.settingsHelper.getSetting("hideCardIOLogo") as! Bool
-        cardIOVC.disableManualEntryButtons = self.settingsHelper.getSetting("disableManualEntryButtons") as! Bool
+        cardIOVC.languageOrLocale = self.getSetting("locale") as! String
+        cardIOVC.disableBlurWhenBackgrounding = self.self.getSetting("backgroundBlur") as! Bool
+        cardIOVC.guideColor = self.self.getSetting("guideColor") as! UIColor
+        cardIOVC.suppressScanConfirmation = self.self.getSetting("scanConfirmation") as! Bool
+        cardIOVC.suppressScannedCardImage = self.self.getSetting("suppressScannedCardImage") as! Bool
+        cardIOVC.scannedImageDuration = self.self.getSetting("scannedImageDuration") as! CGFloat
+        cardIOVC.hideCardIOLogo = self.self.getSetting("hideCardIOLogo") as! Bool
+        cardIOVC.disableManualEntryButtons = self.self.getSetting("disableManualEntryButtons") as! Bool
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "VCSettingsSegue" {
             let destinationViewController = segue.destinationViewController as! VCSettingsViewController
-            destinationViewController.settingsHelper = self.settingsHelper
+            destinationViewController.mainVC = self
         }
+    }
+    
+    func getSetting(key : String) -> AnyObject {
+        return settingsDict[key]!
+    }
+    
+    func setSetting(key : String, setting : AnyObject) {
+        self.settingsDict[key] = setting
     }
 }
 

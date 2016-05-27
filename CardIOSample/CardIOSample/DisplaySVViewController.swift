@@ -28,7 +28,7 @@ class DisplaySVViewController: UIViewController, CardIOViewDelegate {
         }
         self.cancelButton.hidden = true
         
-        let rect = CGRect(x: 10, y: 10, width: 400, height: 400)
+        let rect = CGRect(x: 10, y: 80, width: 400, height: 400)
         self.cardIOView = CardIOView(frame: rect)
         cardIOView.delegate = self
     }

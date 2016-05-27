@@ -75,22 +75,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeN-vM-UYL">
-                                <rect key="frame" x="279.5" y="343" width="42" height="21"/>
+                                <rect key="frame" x="279" y="343" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGW-lu-H1k">
+                                <rect key="frame" x="20" y="501" width="560" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelScan:" destination="IUx-zI-57q" eventType="touchUpInside" id="7XP-Yt-24l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LGW-lu-H1k" secondAttribute="trailing" constant="20" id="3JA-9h-hgY"/>
                             <constraint firstItem="pfm-kn-fMS" firstAttribute="centerX" secondItem="3No-I9-ayk" secondAttribute="centerX" id="6i3-rm-WhC"/>
                             <constraint firstItem="jeN-vM-UYL" firstAttribute="top" secondItem="pfm-kn-fMS" secondAttribute="bottom" constant="28" id="6sM-ap-Hge"/>
                             <constraint firstItem="pfm-kn-fMS" firstAttribute="centerY" secondItem="3No-I9-ayk" secondAttribute="centerY" id="Sf9-SJ-Ntc"/>
                             <constraint firstItem="jeN-vM-UYL" firstAttribute="centerX" secondItem="3No-I9-ayk" secondAttribute="centerX" id="Z4m-97-0a1"/>
+                            <constraint firstItem="LGW-lu-H1k" firstAttribute="leading" secondItem="3No-I9-ayk" secondAttribute="leading" constant="20" id="ifu-yi-f2x"/>
+                            <constraint firstItem="Mmf-b7-71Z" firstAttribute="top" secondItem="LGW-lu-H1k" secondAttribute="bottom" constant="20" id="qNd-20-RlR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Subview" id="Q2V-8K-kP4"/>
                     <connections>
+                        <outlet property="cancelButton" destination="LGW-lu-H1k" id="6Zx-rU-ZLE"/>
                         <outlet property="resultsLabel" destination="jeN-vM-UYL" id="AQ6-TJ-8wI"/>
                         <outlet property="scanCardButton" destination="pfm-kn-fMS" id="uFW-uc-o4M"/>
                     </connections>

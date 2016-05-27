@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VCSettingsViewController: UIViewController {
+class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     
     var mainVC : DisplayVCViewController!
 
@@ -30,7 +30,7 @@ class VCSettingsViewController: UIViewController {
         self.backgroundBlurSwitch.on = mainVC.getSetting("backgroundBlur") as! Bool
         self.colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
         self.confirmScanInfoSwitch.on = mainVC.getSetting("scanConfirmation") as! Bool
-        //cardIOVC.suppressScannedCardImage = mainVC.getSetting("suppressScannedCardImage") as! Bool
+        self.confirmWithManualSwitch.on = mainVC.getSetting("suppressScannedCardImage") as! Bool
         self.scannedImageDurationTextField.text = "\((mainVC.getSetting("scannedImageDuration") as! CGFloat))"
         self.hideCardIOLabel.on = mainVC.getSetting("hideCardIOLogo") as! Bool
         self.disableManualEntryButtonsSwitch.on = mainVC.getSetting("disableManualEntryButtons") as! Bool
@@ -79,4 +79,32 @@ class VCSettingsViewController: UIViewController {
         self.mainVC.setSetting("backgroundBlur", setting: sender.on)
     }
     
+    @IBAction func confirmScanInfo(sender: AnyObject) {
+         self.mainVC.setSetting("scanConfirmation", setting: sender.on)
+    }
+    
+    @IBAction func confirmWithManualEntry(sender: AnyObject) {
+         self.mainVC.setSetting("suppressScannedCardImage", setting: sender.on)
+    }
+    
+    @IBAction func hideCardIOLabel(sender: AnyObject) {
+         self.mainVC.setSetting("hideCardIOLogo", setting: sender.on)
+    }
+    
+    @IBAction func disableManualEntryButtons(sender: AnyObject) {
+         self.mainVC.setSetting("disableManualEntryButtons", setting: sender.on)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField.tag == 0 {
+            //locale
+            self.mainVC.setSetting("locale", setting: textField.text!)
+        } else if textField.tag == 1 {
+            //duration
+            let num =  NSNumberFormatter().numberFromString(textField.text!)
+            self.mainVC.setSetting("scannedImageDuration", setting: num!)
+        }
+        return true
+    }
 }

@@ -35,8 +35,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-g8-Od3">
-                                <rect key="frame" x="265" y="285" width="71" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-g8-Od3">
+                                <rect key="frame" x="258" y="283" width="84" height="34"/>
+                                <color key="backgroundColor" red="0.42298763290000002" green="0.52661822979999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Scan Card"/>
                                 <connections>
                                     <action selector="scanCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G93-h8-hag"/>
@@ -148,7 +149,7 @@
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4d-EX-L9t">
                                 <rect key="frame" x="465.5" y="364" width="114.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="pIU-aq-ZjM" id="MEo-H8-DnR"/>
                                 </connections>
@@ -227,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVc-Lq-mEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="47"/>
+            <point key="canvasLocation" x="2883" y="405"/>
         </scene>
         <!--DisplaySV View Controller-->
         <scene sceneID="sD1-ZZ-hhC">
@@ -278,6 +279,7 @@
                         <outlet property="cancelButton" destination="LGW-lu-H1k" id="6Zx-rU-ZLE"/>
                         <outlet property="resultsLabel" destination="jeN-vM-UYL" id="AQ6-TJ-8wI"/>
                         <outlet property="scanCardButton" destination="pfm-kn-fMS" id="uFW-uc-o4M"/>
+                        <segue destination="pIU-aq-ZjM" kind="show" identifier="VCSettingsSegue" id="Czg-u5-451"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6B-ER-zxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,4 +325,7 @@
             <point key="canvasLocation" x="1054" y="818"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Czg-u5-451"/>
+    </inferredMetricsTieBreakers>
 </document>

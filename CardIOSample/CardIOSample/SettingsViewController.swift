@@ -22,7 +22,6 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var hideCardIOLabel: UISwitch!
     @IBOutlet weak var disableManualEntryButtonsSwitch: UISwitch!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -53,6 +53,7 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
         if self.settingsDict["manualEntry"] as! Bool == false {
             print("scanning enabled")
             cardIOVC = CardIOPaymentViewController(paymentDelegate: self, scanningEnabled: true)
+            cardIOVC.collectCardholderName = true
         } else {
             print("scanning NOT enabled")
             cardIOVC = CardIOPaymentViewController(paymentDelegate: self, scanningEnabled: false)

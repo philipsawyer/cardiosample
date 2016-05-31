@@ -43,7 +43,7 @@ class DisplaySVViewController: UIViewController, CardIOViewDelegate {
         print("didScanCard")
         
         if cardInfo != nil {
-            let result = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", cardInfo.redactedCardNumber, cardInfo.expiryMonth, cardInfo.expiryYear, cardInfo.cvv)
+            let result = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", (cardInfo.redactedCardNumber) ?? "", cardInfo.expiryMonth, cardInfo.expiryYear, (cardInfo.cvv) ?? "")
             self.resultsLabel.hidden = false
             self.resultsLabel.text = result as String
         } else {

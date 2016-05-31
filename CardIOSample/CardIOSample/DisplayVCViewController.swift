@@ -85,12 +85,14 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
         cardIOVC.collectCVV = self.getSetting("collectCVV") as! Bool
     }
     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "VCSettingsSegue" {
             let destinationViewController = segue.destinationViewController as! VCSettingsViewController
             destinationViewController.mainVC = self
         }
     }
+    
     
     func getSetting(key : String) -> AnyObject {
         return settingsDict[key]!

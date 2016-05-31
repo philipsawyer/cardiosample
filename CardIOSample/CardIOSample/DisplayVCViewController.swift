@@ -18,7 +18,7 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //self = VCself()
-        self.settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false]
+        self.settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false, "manualEntry" : false]
         
         CardIOUtilities.preload()
     }
@@ -49,7 +49,14 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
     }
 
     @IBAction func scanCard(sender: AnyObject) {
-        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
+        let cardIOVC : CardIOPaymentViewController!
+        if self.settingsDict["manualEntry"] as! Bool == false {
+            print("scanning enabled")
+            cardIOVC = CardIOPaymentViewController(paymentDelegate: self, scanningEnabled: true)
+        } else {
+            print("scanning NOT enabled")
+            cardIOVC = CardIOPaymentViewController(paymentDelegate: self, scanningEnabled: false)
+        }
         self.setUpViewController(cardIOVC)
         cardIOVC.modalPresentationStyle = .FormSheet
         presentViewController(cardIOVC, animated: true, completion: nil)

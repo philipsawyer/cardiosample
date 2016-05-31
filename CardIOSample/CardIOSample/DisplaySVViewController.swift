@@ -71,11 +71,4 @@ class DisplaySVViewController: UIViewController, CardIOViewDelegate {
     func removeCardView() {
         self.cardIOView.removeFromSuperview()
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "VCSettingsSegue" {
-            let destinationViewController = segue.destinationViewController as! VCSettingsViewController
-            destinationViewController.mainVC = self
-        }
-    }
 }

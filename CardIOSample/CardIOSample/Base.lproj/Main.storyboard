@@ -147,7 +147,7 @@
                                 </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4d-EX-L9t">
-                                <rect key="frame" x="465.5" y="364" width="114.5" height="30"/>
+                                <rect key="frame" x="465" y="364" width="114.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
@@ -178,6 +178,18 @@
                                     <action selector="disableManualEntryButtons:" destination="pIU-aq-ZjM" eventType="valueChanged" id="G19-tV-vAJ"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manual Entry Only: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHD-Aj-mqN">
+                                <rect key="frame" x="20" y="510" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-QP-SfK">
+                                <rect key="frame" x="531" y="507" width="51" height="31"/>
+                                <connections>
+                                    <action selector="updateManualEntryOnly:" destination="pIU-aq-ZjM" eventType="valueChanged" id="Ta6-Jw-uC7"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -198,11 +210,14 @@
                             <constraint firstItem="J0X-ud-gnR" firstAttribute="top" secondItem="U1v-du-qJw" secondAttribute="bottom" constant="19" id="Trd-Sl-uZq"/>
                             <constraint firstAttribute="trailing" secondItem="1WO-WQ-mjz" secondAttribute="trailing" constant="20" id="XDd-xU-WHx"/>
                             <constraint firstItem="wVz-CX-fAW" firstAttribute="top" secondItem="CMd-H0-74d" secondAttribute="bottom" constant="20" id="YeV-Ob-IMA"/>
+                            <constraint firstItem="Urq-QP-SfK" firstAttribute="top" secondItem="sEN-ce-YQN" secondAttribute="bottom" constant="19" id="Ymy-Q5-4H6"/>
                             <constraint firstItem="wVz-CX-fAW" firstAttribute="leading" secondItem="YGa-ln-1af" secondAttribute="leading" constant="20" id="cdB-N9-9X7"/>
+                            <constraint firstAttribute="trailing" secondItem="Urq-QP-SfK" secondAttribute="trailing" constant="20" id="cxX-5Q-tkC"/>
                             <constraint firstItem="EiQ-GK-Yqc" firstAttribute="leading" secondItem="YGa-ln-1af" secondAttribute="leading" constant="20" id="czm-jL-WoP"/>
                             <constraint firstItem="x4d-EX-L9t" firstAttribute="top" secondItem="1WO-WQ-mjz" secondAttribute="bottom" constant="21" id="e1w-6D-9F2"/>
                             <constraint firstItem="3GV-GE-ueu" firstAttribute="top" secondItem="orM-Ys-no7" secondAttribute="bottom" constant="29" id="fW3-e8-9WR"/>
                             <constraint firstItem="orM-Ys-no7" firstAttribute="leading" secondItem="YGa-ln-1af" secondAttribute="leading" constant="20" id="fhQ-sE-xt3"/>
+                            <constraint firstItem="JHD-Aj-mqN" firstAttribute="top" secondItem="3GV-GE-ueu" secondAttribute="bottom" constant="27" id="gWi-JE-lIP"/>
                             <constraint firstAttribute="trailing" secondItem="sEN-ce-YQN" secondAttribute="trailing" constant="20" id="hX9-89-YtH"/>
                             <constraint firstItem="ILm-nQ-Tyt" firstAttribute="top" secondItem="f6h-zM-bSb" secondAttribute="bottom" constant="30" id="hza-A7-gTh"/>
                             <constraint firstAttribute="trailing" secondItem="J0X-ud-gnR" secondAttribute="trailing" constant="20" id="kBs-y5-kAc"/>
@@ -211,6 +226,7 @@
                             <constraint firstItem="LVQ-ux-ePR" firstAttribute="leading" secondItem="YGa-ln-1af" secondAttribute="leading" constant="20" id="umZ-6Z-6tr"/>
                             <constraint firstItem="1WO-WQ-mjz" firstAttribute="top" secondItem="J0X-ud-gnR" secondAttribute="bottom" constant="15" id="usm-rg-Fqt"/>
                             <constraint firstItem="EiQ-GK-Yqc" firstAttribute="top" secondItem="w90-6J-USH" secondAttribute="bottom" constant="49" id="weF-Y2-mdP"/>
+                            <constraint firstItem="JHD-Aj-mqN" firstAttribute="leading" secondItem="YGa-ln-1af" secondAttribute="leading" constant="20" id="xdO-wa-MYI"/>
                             <constraint firstAttribute="trailing" secondItem="egM-yV-57p" secondAttribute="trailing" constant="20" id="yPp-dO-APE"/>
                             <constraint firstItem="sEN-ce-YQN" firstAttribute="top" secondItem="yKA-yF-HXi" secondAttribute="bottom" constant="19" id="yea-sK-jfo"/>
                         </constraints>
@@ -223,6 +239,7 @@
                         <outlet property="disableManualEntryButtonsSwitch" destination="sEN-ce-YQN" id="SDN-0C-eQF"/>
                         <outlet property="hideCardIOLabel" destination="yKA-yF-HXi" id="mXu-2F-lJo"/>
                         <outlet property="localeTextField" destination="egM-yV-57p" id="Dj4-K3-4Cq"/>
+                        <outlet property="manualOnlySwitch" destination="Urq-QP-SfK" id="65d-cp-vbx"/>
                         <outlet property="scannedImageDurationTextField" destination="x4d-EX-L9t" id="2B8-in-KZ5"/>
                     </connections>
                 </viewController>

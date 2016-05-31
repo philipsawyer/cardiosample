@@ -18,6 +18,7 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmScanInfoSwitch: UISwitch!
     @IBOutlet weak var confirmWithManualSwitch: UISwitch!
     @IBOutlet weak var scannedImageDurationTextField: UITextField!
+    @IBOutlet weak var manualOnlySwitch: UISwitch!
     
     @IBOutlet weak var hideCardIOLabel: UISwitch!
     @IBOutlet weak var disableManualEntryButtonsSwitch: UISwitch!
@@ -33,6 +34,7 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
         self.scannedImageDurationTextField.text = "\((mainVC.getSetting("scannedImageDuration") as! CGFloat))"
         self.hideCardIOLabel.on = mainVC.getSetting("hideCardIOLogo") as! Bool
         self.disableManualEntryButtonsSwitch.on = mainVC.getSetting("disableManualEntryButtons") as! Bool
+        self.manualOnlySwitch.on = mainVC.getSetting("manualEntry") as! Bool
     }
     
     
@@ -105,5 +107,9 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
             self.mainVC.setSetting("scannedImageDuration", setting: num!)
         }
         return true
+    }
+    
+    @IBAction func updateManualEntryOnly(sender: AnyObject) {
+        self.mainVC.setSetting("manualEntry", setting: sender.on)
     }
 }

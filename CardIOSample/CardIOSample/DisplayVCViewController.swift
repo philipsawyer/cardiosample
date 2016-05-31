@@ -11,14 +11,15 @@ import UIKit
 class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDelegate {
     
     var settingsDict : [String : AnyObject]!
-    let defaultColor = UIColor.greenColor()
-
+    @IBOutlet weak var resultsLabel: UILabel!
+    
     override func viewDidLoad() {
         self.title = "CardIO as ViewController"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self = VCself()
-        self.settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false, "manualEntry" : false]
+        self.resultsLabel.hidden = true
+        let defaultColor = UIColor.greenColor()
+        self.settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false, "manualEntry" : false, "collectName" : true, "collectCVV" : true]
         
         CardIOUtilities.preload()
     }
@@ -41,9 +42,13 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
     }
     
     func userDidProvideCreditCardInfo(cardInfo: CardIOCreditCardInfo!, inPaymentViewController paymentViewController: CardIOPaymentViewController!) {
+        self.resultsLabel.hidden = false
         if let info = cardInfo {
-            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@\nName: %@", (info.redactedCardNumber) ?? "", (info.expiryMonth) ?? "", (info.expiryYear) ?? "", (info.cvv) ?? "", (info.cardholderName) ?? "")
             print(str)
+            self.resultsLabel.text = str as String
+        } else {
+            self.resultsLabel.text = "There were errors reading card"
         }
         paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -69,13 +74,15 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
     
     func setUpViewController(cardIOVC : CardIOPaymentViewController) {
         cardIOVC.languageOrLocale = self.getSetting("locale") as! String
-        cardIOVC.disableBlurWhenBackgrounding = self.self.getSetting("backgroundBlur") as! Bool
-        cardIOVC.guideColor = self.self.getSetting("guideColor") as! UIColor
-        cardIOVC.suppressScanConfirmation = self.self.getSetting("scanConfirmation") as! Bool
-        cardIOVC.suppressScannedCardImage = self.self.getSetting("suppressScannedCardImage") as! Bool
-        cardIOVC.scannedImageDuration = self.self.getSetting("scannedImageDuration") as! CGFloat
-        cardIOVC.hideCardIOLogo = self.self.getSetting("hideCardIOLogo") as! Bool
-        cardIOVC.disableManualEntryButtons = self.self.getSetting("disableManualEntryButtons") as! Bool
+        cardIOVC.disableBlurWhenBackgrounding = self.getSetting("backgroundBlur") as! Bool
+        cardIOVC.guideColor = self.getSetting("guideColor") as! UIColor
+        cardIOVC.suppressScanConfirmation = self.getSetting("scanConfirmation") as! Bool
+        cardIOVC.suppressScannedCardImage = self.getSetting("suppressScannedCardImage") as! Bool
+        cardIOVC.scannedImageDuration = self.getSetting("scannedImageDuration") as! CGFloat
+        cardIOVC.hideCardIOLogo = self.getSetting("hideCardIOLogo") as! Bool
+        cardIOVC.disableManualEntryButtons = self.getSetting("disableManualEntryButtons") as! Bool
+        cardIOVC.collectCardholderName = self.getSetting("collectName") as! Bool
+        cardIOVC.collectCVV = self.getSetting("collectCVV") as! Bool
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

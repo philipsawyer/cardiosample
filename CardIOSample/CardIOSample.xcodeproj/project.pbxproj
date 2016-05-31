@@ -18,6 +18,7 @@
 		DD54C7FD1CF731CC003FBB97 /* CardIOSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C7FC1CF731CC003FBB97 /* CardIOSampleUITests.swift */; };
 		DD54C80E1CF78A00003FBB97 /* DisplaySVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD54C80D1CF78A00003FBB97 /* DisplaySVViewController.swift */; };
 		DD57271D1CF8915800EB3DBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57271C1CF8915800EB3DBA /* SettingsViewController.swift */; };
+		DDAC63CE1CFE168E00EA0CDE /* cardio_logo_220.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAC63CD1CFE168E00EA0CDE /* cardio_logo_220.png */; };
 		F0648F88CEB0BA3E02727F06 /* Pods_CardIOSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D400AE118D46536124EF23 /* Pods_CardIOSampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		DD54C80A1CF7346D003FBB97 /* CardIOSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardIOSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD54C80D1CF78A00003FBB97 /* DisplaySVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplaySVViewController.swift; sourceTree = "<group>"; };
 		DD57271C1CF8915800EB3DBA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DDAC63CD1CFE168E00EA0CDE /* cardio_logo_220.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardio_logo_220.png; sourceTree = "<group>"; };
 		F61414429E31747AFB0F888F /* Pods_CardIOSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardIOSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA465ADFF9EEE0856F62EDA /* Pods-CardIOSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardIOSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardIOSample/Pods-CardIOSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 		DD54C7DB1CF731CC003FBB97 /* CardIOSample */ = {
 			isa = PBXGroup;
 			children = (
+				DDAC63CC1CFE168400EA0CDE /* assets */,
 				DD54C7DC1CF731CC003FBB97 /* AppDelegate.swift */,
 				DD54C7DE1CF731CC003FBB97 /* DisplayVCViewController.swift */,
 				DD54C80D1CF78A00003FBB97 /* DisplaySVViewController.swift */,
@@ -171,6 +174,14 @@
 				DD54C7FE1CF731CC003FBB97 /* Info.plist */,
 			);
 			path = CardIOSampleUITests;
+			sourceTree = "<group>";
+		};
+		DDAC63CC1CFE168400EA0CDE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DDAC63CD1CFE168E00EA0CDE /* cardio_logo_220.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				DD54C7E71CF731CC003FBB97 /* LaunchScreen.storyboard in Resources */,
 				DD54C7E41CF731CC003FBB97 /* Assets.xcassets in Resources */,
 				DD54C7E21CF731CC003FBB97 /* Main.storyboard in Resources */,
+				DDAC63CE1CFE168E00EA0CDE /* cardio_logo_220.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

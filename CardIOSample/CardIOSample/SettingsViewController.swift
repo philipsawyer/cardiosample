@@ -19,12 +19,15 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmWithManualSwitch: UISwitch!
     @IBOutlet weak var scannedImageDurationTextField: UITextField!
     @IBOutlet weak var manualOnlySwitch: UISwitch!
-    
     @IBOutlet weak var hideCardIOLabel: UISwitch!
     @IBOutlet weak var disableManualEntryButtonsSwitch: UISwitch!
+    @IBOutlet weak var collectCVVSwitch: UISwitch!
+    @IBOutlet weak var collectNameSwtich: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Settings"
         
         self.localeTextField.text = mainVC.getSetting("locale") as? String
         self.backgroundBlurSwitch.on = mainVC.getSetting("backgroundBlur") as! Bool
@@ -35,6 +38,8 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
         self.hideCardIOLabel.on = mainVC.getSetting("hideCardIOLogo") as! Bool
         self.disableManualEntryButtonsSwitch.on = mainVC.getSetting("disableManualEntryButtons") as! Bool
         self.manualOnlySwitch.on = mainVC.getSetting("manualEntry") as! Bool
+        self.collectCVVSwitch.on = mainVC.getSetting("collectCVV") as! Bool
+        self.collectNameSwtich.on = mainVC.getSetting("collectName") as! Bool
     }
     
     
@@ -111,5 +116,16 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func updateManualEntryOnly(sender: AnyObject) {
         self.mainVC.setSetting("manualEntry", setting: sender.on)
+    }
+    @IBAction func collectCVV(sender: AnyObject) {
+        self.mainVC.setSetting("collectCVV", setting: sender.on)
+    }
+    @IBAction func collectName(sender: AnyObject) {
+        self.mainVC.setSetting("collectName", setting: sender.on)
+    }
+    @IBAction func dismissKeyBoardGesture(sender: AnyObject) {
+        print("tap recognized")
+        self.localeTextField.resignFirstResponder()
+        self.scannedImageDurationTextField.resignFirstResponder()
     }
 }

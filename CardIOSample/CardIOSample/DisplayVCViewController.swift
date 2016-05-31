@@ -14,9 +14,9 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
     @IBOutlet weak var resultsLabel: UILabel!
     
     override func viewDidLoad() {
-        self.title = "CardIO as ViewController"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.title = "CardIO as ViewController"
         self.resultsLabel.hidden = true
         let defaultColor = UIColor.greenColor()
         self.settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false, "manualEntry" : false, "collectName" : true, "collectCVV" : true]

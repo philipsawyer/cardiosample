@@ -101,11 +101,11 @@
                                 <exclude reference="qiL-Fw-7th"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0T9-PU-Jwd"/>
-                                <exclude reference="J2F-yh-TBZ"/>
                                 <exclude reference="9Y0-cr-jE9"/>
                                 <exclude reference="rUs-Qt-pmk"/>
                                 <exclude reference="wPe-UM-FOd"/>
+                                <exclude reference="0T9-PU-Jwd"/>
+                                <exclude reference="J2F-yh-TBZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -114,11 +114,11 @@
                                 <include reference="qiL-Fw-7th"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0T9-PU-Jwd"/>
-                                <include reference="J2F-yh-TBZ"/>
                                 <include reference="9Y0-cr-jE9"/>
                                 <include reference="rUs-Qt-pmk"/>
                                 <include reference="wPe-UM-FOd"/>
+                                <include reference="0T9-PU-Jwd"/>
+                                <include reference="J2F-yh-TBZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -162,8 +162,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Scan Info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVQ-ux-ePR">
-                                <rect key="frame" x="20" y="271" width="142" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Confirm Scan Info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVQ-ux-ePR">
+                                <rect key="frame" x="20" y="271" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -352,14 +352,14 @@
                                 <exclude reference="4cg-eC-7fG"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9JG-Me-soF"/>
-                                <exclude reference="cdD-vt-J5L"/>
-                                <exclude reference="oSe-cz-I5P"/>
-                                <exclude reference="sB8-MT-Ady"/>
                                 <exclude reference="6bC-d0-Q5n"/>
                                 <exclude reference="ZZU-pB-j8v"/>
                                 <exclude reference="Hif-Kb-OD5"/>
                                 <exclude reference="Hlf-Ch-Gs8"/>
+                                <exclude reference="9JG-Me-soF"/>
+                                <exclude reference="cdD-vt-J5L"/>
+                                <exclude reference="oSe-cz-I5P"/>
+                                <exclude reference="sB8-MT-Ady"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -370,14 +370,14 @@
                                 <include reference="4cg-eC-7fG"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9JG-Me-soF"/>
-                                <include reference="cdD-vt-J5L"/>
-                                <include reference="oSe-cz-I5P"/>
-                                <include reference="sB8-MT-Ady"/>
                                 <include reference="6bC-d0-Q5n"/>
                                 <include reference="ZZU-pB-j8v"/>
                                 <include reference="Hif-Kb-OD5"/>
                                 <include reference="Hlf-Ch-Gs8"/>
+                                <include reference="9JG-Me-soF"/>
+                                <include reference="cdD-vt-J5L"/>
+                                <include reference="oSe-cz-I5P"/>
+                                <include reference="sB8-MT-Ady"/>
                             </mask>
                         </variation>
                         <connections>
@@ -433,7 +433,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGW-lu-H1k">
-                                <rect key="frame" x="20" y="501" width="560" height="30"/>
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelScan:" destination="IUx-zI-57q" eventType="touchUpInside" id="7XP-Yt-24l"/>

@@ -456,7 +456,6 @@
                         <outlet property="cancelButton" destination="LGW-lu-H1k" id="6Zx-rU-ZLE"/>
                         <outlet property="resultsLabel" destination="jeN-vM-UYL" id="AQ6-TJ-8wI"/>
                         <outlet property="scanCardButton" destination="pfm-kn-fMS" id="uFW-uc-o4M"/>
-                        <segue destination="pIU-aq-ZjM" kind="show" identifier="VCSettingsSegue" id="Czg-u5-451"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6B-ER-zxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -505,7 +504,4 @@
     <resources>
         <image name="cardio_logo_220.png" width="220" height="144"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="FSi-MH-yfd"/>
-    </inferredMetricsTieBreakers>
 </document>

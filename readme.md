@@ -1,4 +1,4 @@
-# CardIO Sample
+# CardIOSample
 
 ###This is a sample app to demonstrate the capabilites of the open source project card.io made possible by Paypal.
 

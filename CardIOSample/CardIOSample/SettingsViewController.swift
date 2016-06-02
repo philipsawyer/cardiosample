@@ -29,41 +29,36 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
         
         title = "Settings"
         
-        localeTextField.text = mainVC.getSetting("locale") as? String
-        backgroundBlurSwitch.on = mainVC.getSetting("backgroundBlur") as! Bool
-        colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
-        confirmScanInfoSwitch.on = mainVC.getSetting("scanConfirmation") as! Bool
-        confirmWithManualSwitch.on = mainVC.getSetting("suppressScannedCardImage") as! Bool
-        scannedImageDurationTextField.text = "\((mainVC.getSetting("scannedImageDuration") as! CGFloat))"
-        hideCardIOLabel.on = mainVC.getSetting("hideCardIOLogo") as! Bool
-        disableManualEntryButtonsSwitch.on = mainVC.getSetting("disableManualEntryButtons") as! Bool
-        manualOnlySwitch.on = mainVC.getSetting("manualEntry") as! Bool
-        collectCVVSwitch.on = mainVC.getSetting("collectCVV") as! Bool
-        collectNameSwtich.on = mainVC.getSetting("collectName") as! Bool
+        localeTextField.text = mainVC.config.locale
+        backgroundBlurSwitch.on = mainVC.config.backgroundBlur
+        colorButton.setTitle(mainVC.config.guideColor.description, forState: .Normal)
+        confirmScanInfoSwitch.on = mainVC.config.scanConfirmation
+        confirmWithManualSwitch.on = mainVC.config.suppressScannedCardImage
+        scannedImageDurationTextField.text = "\((mainVC.config.scannedImageDuration))"
+        hideCardIOLabel.on = mainVC.config.hideCardIOLogo
+        disableManualEntryButtonsSwitch.on = mainVC.config.disableManualEntryButtons
+        manualOnlySwitch.on = mainVC.config.manualEntry
+        collectCVVSwitch.on = mainVC.config.collectCVV
+        collectNameSwtich.on = mainVC.config.collectName
     }
     
     
     @IBAction func changeColorGuide(sender: AnyObject) {
         let actionsheet = UIAlertController(title: "Select Color", message: nil, preferredStyle: .ActionSheet)
         let orangeAction = UIAlertAction(title: "Orange", style: .Default) { action -> Void in
-            self.mainVC.settingsDict["guideColor"] = UIColor.orangeColor()
-            self.updateColorTextField()
+            self.setColor(UIColor.orangeColor())
         }
         let redAction = UIAlertAction(title: "Red", style: .Default) { action -> Void in
-            self.mainVC.settingsDict["guideColor"] = UIColor.redColor()
-            self.updateColorTextField()
+            self.setColor(UIColor.redColor())
         }
         let blueAction = UIAlertAction(title: "Blue", style: .Default) { action -> Void in
-            self.mainVC.settingsDict["guideColor"] = UIColor.blueColor()
-            self.updateColorTextField()
+            self.setColor(UIColor.blueColor())
         }
         let yellowAction = UIAlertAction(title: "Yellow", style: .Default) { action -> Void in
-            self.mainVC.settingsDict["guideColor"] = UIColor.yellowColor()
-            self.updateColorTextField()
+            self.setColor(UIColor.yellowColor())
         }
         let greenAction = UIAlertAction(title: "Green", style: .Default) { action -> Void in
-            self.mainVC.settingsDict["guideColor"] = UIColor.greenColor()
-            self.updateColorTextField()
+            self.setColor(UIColor.greenColor())
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         actionsheet.addAction(orangeAction)
@@ -76,52 +71,57 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
         presentViewController(actionsheet, animated: true, completion: nil)
     }
     
+    func setColor(color : UIColor) {
+        self.mainVC.config.guideColor = color
+        self.updateColorTextField()
+    }
+    
     func updateColorTextField() {
-        colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
+        colorButton.setTitle(mainVC.config.guideColor.description, forState: .Normal)
     }
     
     
     @IBAction func disableBackgroundBlur(sender: AnyObject) {
-        mainVC.setSetting("backgroundBlur", setting: sender.on)
+        mainVC.config.backgroundBlur = sender.on
     }
     
     @IBAction func confirmScanInfo(sender: AnyObject) {
-         mainVC.setSetting("scanConfirmation", setting: sender.on)
+         mainVC.config.scanConfirmation = sender.on
     }
     
     @IBAction func confirmWithManualEntry(sender: AnyObject) {
-         mainVC.setSetting("suppressScannedCardImage", setting: sender.on)
+         mainVC.config.suppressScannedCardImage = sender.on
     }
     
     @IBAction func hideCardIOLabel(sender: AnyObject) {
-         mainVC.setSetting("hideCardIOLogo", setting: sender.on)
+         mainVC.config.hideCardIOLogo = sender.on
     }
     
     @IBAction func disableManualEntryButtons(sender: AnyObject) {
-         mainVC.setSetting("disableManualEntryButtons", setting: sender.on)
+         mainVC.config.disableManualEntryButtons = sender.on
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if textField == localeTextField {
             //locale
-            mainVC.setSetting("locale", setting: textField.text!)
+            mainVC.config.locale = textField.text!
         } else if textField == scannedImageDurationTextField {
             //duration
             let num =  NSNumberFormatter().numberFromString(textField.text!)
-            mainVC.setSetting("scannedImageDuration", setting: num!)
+            mainVC.config.scannedImageDuration = num as! CGFloat
         }
         return true
     }
     
     @IBAction func updateManualEntryOnly(sender: AnyObject) {
-        mainVC.setSetting("manualEntry", setting: sender.on)
+        mainVC.config.manualEntry = sender.on
     }
     @IBAction func collectCVV(sender: AnyObject) {
-        mainVC.setSetting("collectCVV", setting: sender.on)
+        mainVC.config.collectCVV = sender.on
     }
     @IBAction func collectName(sender: AnyObject) {
-        mainVC.setSetting("collectName", setting: sender.on)
+        mainVC.config.collectName = sender.on
     }
     @IBAction func dismissKeyBoardGesture(sender: AnyObject) {
         print("tap recognized")

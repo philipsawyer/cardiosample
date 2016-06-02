@@ -8,18 +8,34 @@
 
 import UIKit
 
+struct Config {
+    var locale: String
+    var backgroundBlur: Bool
+    var guideColor : UIColor
+    var scanConfirmation : Bool
+    var suppressScannedCardImage : Bool
+    var scannedImageDuration : CGFloat
+    var hideCardIOLogo : Bool
+    var disableManualEntryButtons : Bool
+    var manualEntry : Bool
+    var collectName : Bool
+    var collectCVV : Bool
+}
+
 class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDelegate {
     
-    var settingsDict : [String : AnyObject]!
     @IBOutlet weak var resultsLabel: UILabel!
+    var config : Config!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        config = Config(locale: "en", backgroundBlur: false, guideColor: UIColor.greenColor(), scanConfirmation: false, suppressScannedCardImage: false, scannedImageDuration: 0.1, hideCardIOLogo: false, disableManualEntryButtons: false, manualEntry: false, collectName: true, collectCVV: true)
+        
         title = "CardIO as ViewController"
         resultsLabel.hidden = true
-        let defaultColor = UIColor.greenColor()
-        settingsDict = ["locale" : "en", "backgroundBlur" : false, "guideColor" : defaultColor, "scanConfirmation" : false, "suppressScannedCardImage" : false, "scannedImageDuration" : 0.1, "hideCardIOLogo" : false, "disableManualEntryButtons" : false, "manualEntry" : false, "collectName" : true, "collectCVV" : true]
         
         CardIOUtilities.preload()
     }
@@ -55,7 +71,7 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
 
     @IBAction func scanCard(sender: AnyObject) {
         let cardIOVC : CardIOPaymentViewController!
-        if settingsDict["manualEntry"] as! Bool == false {
+        if config.manualEntry == false {
             print("scanning enabled")
             cardIOVC = CardIOPaymentViewController(paymentDelegate: self, scanningEnabled: true)
             cardIOVC.collectCardholderName = true
@@ -73,16 +89,16 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
     }
     
     func setUpViewController(cardIOVC : CardIOPaymentViewController) {
-        cardIOVC.languageOrLocale = getSetting("locale") as! String
-        cardIOVC.disableBlurWhenBackgrounding = getSetting("backgroundBlur") as! Bool
-        cardIOVC.guideColor = getSetting("guideColor") as! UIColor
-        cardIOVC.suppressScanConfirmation = getSetting("scanConfirmation") as! Bool
-        cardIOVC.suppressScannedCardImage = getSetting("suppressScannedCardImage") as! Bool
-        cardIOVC.scannedImageDuration = getSetting("scannedImageDuration") as! CGFloat
-        cardIOVC.hideCardIOLogo = getSetting("hideCardIOLogo") as! Bool
-        cardIOVC.disableManualEntryButtons = getSetting("disableManualEntryButtons") as! Bool
-        cardIOVC.collectCardholderName = getSetting("collectName") as! Bool
-        cardIOVC.collectCVV = getSetting("collectCVV") as! Bool
+        cardIOVC.languageOrLocale = config.locale
+        cardIOVC.disableBlurWhenBackgrounding = config.backgroundBlur
+        cardIOVC.guideColor = config.guideColor
+        cardIOVC.suppressScanConfirmation = config.scanConfirmation
+        cardIOVC.suppressScannedCardImage = config.suppressScannedCardImage
+        cardIOVC.scannedImageDuration = config.scannedImageDuration
+        cardIOVC.hideCardIOLogo = config.hideCardIOLogo
+        cardIOVC.disableManualEntryButtons = config.disableManualEntryButtons
+        cardIOVC.collectCardholderName = config.collectName
+        cardIOVC.collectCVV = config.collectCVV
     }
     
     
@@ -93,13 +109,4 @@ class DisplayVCViewController: UIViewController, CardIOPaymentViewControllerDele
         }
     }
     
-    
-    func getSetting(key : String) -> AnyObject {
-        return settingsDict[key]!
-    }
-    
-    func setSetting(key : String, setting : AnyObject) {
-        settingsDict[key] = setting
-    }
 }
-

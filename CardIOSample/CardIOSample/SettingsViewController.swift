@@ -27,19 +27,19 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Settings"
+        title = "Settings"
         
-        self.localeTextField.text = mainVC.getSetting("locale") as? String
-        self.backgroundBlurSwitch.on = mainVC.getSetting("backgroundBlur") as! Bool
-        self.colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
-        self.confirmScanInfoSwitch.on = mainVC.getSetting("scanConfirmation") as! Bool
-        self.confirmWithManualSwitch.on = mainVC.getSetting("suppressScannedCardImage") as! Bool
-        self.scannedImageDurationTextField.text = "\((mainVC.getSetting("scannedImageDuration") as! CGFloat))"
-        self.hideCardIOLabel.on = mainVC.getSetting("hideCardIOLogo") as! Bool
-        self.disableManualEntryButtonsSwitch.on = mainVC.getSetting("disableManualEntryButtons") as! Bool
-        self.manualOnlySwitch.on = mainVC.getSetting("manualEntry") as! Bool
-        self.collectCVVSwitch.on = mainVC.getSetting("collectCVV") as! Bool
-        self.collectNameSwtich.on = mainVC.getSetting("collectName") as! Bool
+        localeTextField.text = mainVC.getSetting("locale") as? String
+        backgroundBlurSwitch.on = mainVC.getSetting("backgroundBlur") as! Bool
+        colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
+        confirmScanInfoSwitch.on = mainVC.getSetting("scanConfirmation") as! Bool
+        confirmWithManualSwitch.on = mainVC.getSetting("suppressScannedCardImage") as! Bool
+        scannedImageDurationTextField.text = "\((mainVC.getSetting("scannedImageDuration") as! CGFloat))"
+        hideCardIOLabel.on = mainVC.getSetting("hideCardIOLogo") as! Bool
+        disableManualEntryButtonsSwitch.on = mainVC.getSetting("disableManualEntryButtons") as! Bool
+        manualOnlySwitch.on = mainVC.getSetting("manualEntry") as! Bool
+        collectCVVSwitch.on = mainVC.getSetting("collectCVV") as! Bool
+        collectNameSwtich.on = mainVC.getSetting("collectName") as! Bool
     }
     
     
@@ -73,59 +73,59 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
         actionsheet.addAction(greenAction)
         actionsheet.addAction(cancelAction)
         
-        self.presentViewController(actionsheet, animated: true, completion: nil)
+        presentViewController(actionsheet, animated: true, completion: nil)
     }
     
     func updateColorTextField() {
-        self.colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
+        colorButton.setTitle((mainVC.getSetting("guideColor") as! UIColor).description, forState: .Normal)
     }
     
     
     @IBAction func disableBackgroundBlur(sender: AnyObject) {
-        self.mainVC.setSetting("backgroundBlur", setting: sender.on)
+        mainVC.setSetting("backgroundBlur", setting: sender.on)
     }
     
     @IBAction func confirmScanInfo(sender: AnyObject) {
-         self.mainVC.setSetting("scanConfirmation", setting: sender.on)
+         mainVC.setSetting("scanConfirmation", setting: sender.on)
     }
     
     @IBAction func confirmWithManualEntry(sender: AnyObject) {
-         self.mainVC.setSetting("suppressScannedCardImage", setting: sender.on)
+         mainVC.setSetting("suppressScannedCardImage", setting: sender.on)
     }
     
     @IBAction func hideCardIOLabel(sender: AnyObject) {
-         self.mainVC.setSetting("hideCardIOLogo", setting: sender.on)
+         mainVC.setSetting("hideCardIOLogo", setting: sender.on)
     }
     
     @IBAction func disableManualEntryButtons(sender: AnyObject) {
-         self.mainVC.setSetting("disableManualEntryButtons", setting: sender.on)
+         mainVC.setSetting("disableManualEntryButtons", setting: sender.on)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if textField.tag == 0 {
+        if textField == localeTextField {
             //locale
-            self.mainVC.setSetting("locale", setting: textField.text!)
-        } else if textField.tag == 1 {
+            mainVC.setSetting("locale", setting: textField.text!)
+        } else if textField == scannedImageDurationTextField {
             //duration
             let num =  NSNumberFormatter().numberFromString(textField.text!)
-            self.mainVC.setSetting("scannedImageDuration", setting: num!)
+            mainVC.setSetting("scannedImageDuration", setting: num!)
         }
         return true
     }
     
     @IBAction func updateManualEntryOnly(sender: AnyObject) {
-        self.mainVC.setSetting("manualEntry", setting: sender.on)
+        mainVC.setSetting("manualEntry", setting: sender.on)
     }
     @IBAction func collectCVV(sender: AnyObject) {
-        self.mainVC.setSetting("collectCVV", setting: sender.on)
+        mainVC.setSetting("collectCVV", setting: sender.on)
     }
     @IBAction func collectName(sender: AnyObject) {
-        self.mainVC.setSetting("collectName", setting: sender.on)
+        mainVC.setSetting("collectName", setting: sender.on)
     }
     @IBAction func dismissKeyBoardGesture(sender: AnyObject) {
         print("tap recognized")
-        self.localeTextField.resignFirstResponder()
-        self.scannedImageDurationTextField.resignFirstResponder()
+        localeTextField.resignFirstResponder()
+        scannedImageDurationTextField.resignFirstResponder()
     }
 }

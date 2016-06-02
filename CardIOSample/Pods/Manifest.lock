@@ -1,0 +1,12 @@
+PODS:
+  - CardIO (5.3.2)
+
+DEPENDENCIES:
+  - CardIO
+
+SPEC CHECKSUMS:
+  CardIO: 92c45caef0d986c4a303a7afba0c9b76ff2b1f6e
+
+PODFILE CHECKSUM: ca676ba02d919cc368b0623bd32ac5aeb9c8bbbf
+
+COCOAPODS: 1.0.0

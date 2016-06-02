@@ -72,8 +72,8 @@ class VCSettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setColor(color : UIColor) {
-        self.mainVC.config.guideColor = color
-        self.updateColorTextField()
+        mainVC.config.guideColor = color
+        updateColorTextField()
     }
     
     func updateColorTextField() {
